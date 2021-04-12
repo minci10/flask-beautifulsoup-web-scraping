@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Add a Product</title>
+
+{% endblock %}
+
+
+{% block body %}
+
+    <div id="main">
+
+        <h1 class="text-center mt-5 text-info">Add a product</h1>
+
+        <form class="m-5 p-2" action="/" method="POST">
+
+            <div class="form-outline mb-4">
+                <input type="text" name="url" id="url" class="form-control" placeholder="Please enter the URL"/>
+            </div>
+
+            <div class="col-md-12 text-center">
+                <button type="submit" value="Add Product" class="m-auto btn btn-primary mx-auto px-5">Enter</button>
+            </div>
+
+        </form>
+
+    </div>
+
+{% endblock %}

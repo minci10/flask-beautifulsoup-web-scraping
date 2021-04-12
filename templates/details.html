@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Product Details</title>
+<style>
+    .smallsize {
+    display:inline-block;
+    width:35%;
+}
+
+@media screen and (max-width: 768px) {
+    .smallsize {
+        width: 100%;
+    }
+}
+</style>
+{% endblock %}
+
+
+{% block body %}
+<div class="content m-5 p-5">
+     <div class="row pr-5">
+
+          <div class="col-4 smallsize">
+                <img class="m-5 w-75 h-75" style="width:300px;height:300px;" src="{{ product.image }}">
+          </div>
+
+         <div class="col-8 smallsize">
+
+             <div class="col align-self-center">
+                <h5 class="text-justify mt-5 text-info align-self-center">{{ product.name }}</h5>
+             </div>
+             <div class="col align-self-end">
+                 <h5 class="text-justify mt-5 text-warning align-self-center">£{{ product.price }}</h5>
+             </div>
+
+         </div>
+
+     </div>
+
+</div>
+{% endblock %}
